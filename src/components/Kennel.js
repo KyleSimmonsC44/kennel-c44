@@ -9,6 +9,12 @@ import "./employees/Employee.css"
 import { LocationList } from "./locations/LocationList"
 import { LocationProvider } from "./locations/LocationProvider"
 import "./locations/Location.css"
+import { EmployeeProvider } from "./employees/EmployeeProvider"
+import { EmployeeList } from "./employees/EmployeeList"
+import { CustomerProvider } from "./customers/CustomerProvider"
+import { CustomerList } from "./customers/CustomerList"
+import { AnimalProvider } from "./animal/AnimalProvider"
+import { AnimalList } from "./animal/AnimalList"
 
 
 export const Kennel = () => (
@@ -22,16 +28,18 @@ export const Kennel = () => (
 
         <h2>Animals</h2>
         <article className="animals">
-            <Animal />
-            <Animal />
-            <Animal />
+           <AnimalProvider>
+               <AnimalList />
+           </AnimalProvider>
         </article>
 
         <h2>Employees</h2>
         <article className="employees">
-            <Employee />
-            <Employee />
-            <Employee />
+            <EmployeeProvider>
+                <LocationProvider>
+                <EmployeeList />
+                </LocationProvider>
+            </EmployeeProvider>
         </article>
 
         <h2>Locations</h2>
@@ -41,10 +49,9 @@ export const Kennel = () => (
 
         <h2>Customers</h2>
         <article className="customers">
-            <Customer />
-            <Customer />
-            <Customer />
-            <Customer />
+            <CustomerProvider>
+                <CustomerList />
+            </CustomerProvider>
         </article>
     </>
 )
