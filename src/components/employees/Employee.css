@@ -1,12 +1,51 @@
 .employees {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-between;
   }
   
+  .employeeList{
+      display: flex;
+      flex-wrap: wrap;
+  }
   .employee {
-      flex-basis: 28%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
       margin: 1em;
       padding: 1em;
       border: 1px solid goldenrod;
+  }
+
+  .employeeForm{
+      display: flex;
+      flex-direction: column;
+  }
+
+
+  .buttonDiv{
+      display: flex;
+  }
+
+  .test{
+      display: flex;
+      flex-direction: row;
+  }
+
+  .testForm{
+      display: flex;
+  }
+  
+  .form-group{
+      display: flex;
+  }
+
+  .testDiv{
+      display: flex;
+      flex-direction: column;
+  }
+
+  fieldset{
+      margin: 1%;
   }
