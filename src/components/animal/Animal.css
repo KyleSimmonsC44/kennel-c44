@@ -1,6 +1,5 @@
 .animals {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
   }
@@ -45,4 +44,9 @@
 
 fieldset{
     margin: 1%;
+}
+
+.animalButton{
+    display: flex;
+    justify-content: space-evenly;
 }
