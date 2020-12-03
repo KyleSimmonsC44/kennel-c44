@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import "./Location.css"
 
 export const LocationDetail = (props) => {
+    console.log(props)
     return (
         <section className="location">
             <h2 className="location__name">{props.location.state.chosenLocation.name}</h2>

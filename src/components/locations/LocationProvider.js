@@ -35,6 +35,7 @@ export const LocationProvider = (props) => {
         and the `getLocation` function as keys. This
         allows any child elements to access them.
     */
+   
     return (
         <LocationContext.Provider value={{
             locations, addLocation, getLocations
