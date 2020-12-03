@@ -53,6 +53,10 @@ export const ApplicationViews = (props) => {
               path="/animals/:animalId(\d+)"
               render={(props) => <AnimalDetails {...props} />}
             />
+            <Route
+              path="/animals/edit/:animalId(\d+)"
+              render={(props) => <AnimalForm {...props} />}
+            />
 
             <Route
               exact
