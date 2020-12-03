@@ -18,6 +18,13 @@ export const EmployeeProvider = (props) => {
             .then(setEmployees)
     }
 
+    const fireEmployee = employeeId => {
+        return fetch(`http://localhost:8088/employees/${employeeId}`, {
+            method: "DELETE"
+        })
+            .then(getEmployees)
+    }
+
     const addEmployee = employee => {
         return fetch("http://localhost:8088/employees", {
             method: "POST",
@@ -37,7 +44,7 @@ export const EmployeeProvider = (props) => {
     */
     return (
         <EmployeeContext.Provider value={{
-            employees, addEmployee, getEmployees
+            employees, addEmployee, getEmployees, fireEmployee
         }}>
             {props.children}
         </EmployeeContext.Provider>
